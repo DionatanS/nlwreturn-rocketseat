@@ -14,13 +14,15 @@ function closeMenu() {
 }
 
 ScrollReveal({
-	origin:'top',
-	distance: '30px',
-	duration: 700,
+  origin: 'top',
+  distance: '30px',
+  duration: 700
 }).reveal(`
 #home, 
 #home img,
 #home .stats,
 #services,
 #services header,
-#services .card`);
+#services .card,
+#about header,
+#about .content`)

@@ -12,14 +12,15 @@
 
   --brand-beige: hsl(39, 100%, 97%);
   --brand-light: hsl(148, 23%, 89%);
-  
+
   --bg-ligth: hsl(180, 14%, 97%);
+  --brand-dark: hsl(170, 100%, 14%);
 
   font-size: 62.5%; /* 1rem = 10px */
 
   --nav-height: 7.2rem;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -49,19 +50,74 @@ ul {
   list-style: none;
 }
 
-section{
+img {
+  max-width: 100%;
+}
+
+section {
   padding-block: 10rem;
 }
 
-section header h3{
+section header h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 1.6rem;
 
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
 }
-section header h2{
+section header h3 {
+}
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
 
+  color: var(--headline);
 }
-section header h1{
-  
-} 
+section header h1 {
+  font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 2.4rem;
+}
+section .content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--paragraph);
+}
+
+.button {
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+
+  transition: background 0.2s;
+}
+.button:hover {
+  background-color: var(--brand-dark);
+}
 
 /*=== NAVIGATION =================================*/
 nav {
@@ -119,18 +175,8 @@ nav button {
   z-index: -1;
 }
 
-#home h4 {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-  margin-bottom: 1.6rem;
-}
-
-#home h1 {
-  font-size: 3.4rem;
-  color: var(--headline);
-  line-height: 130%;
-
-  margin-bottom: 2.4rem;
+#home .button {
+  margin-inline: auto;
 }
 
 #home p {
@@ -140,31 +186,6 @@ nav button {
   color: var(--paragraph);
 
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  background: var(--primary-color);
-
-  border: none;
-  border-radius: 4rem;
-
-  margin-bottom: 6rem;
-
-  height: 6.2rem;
-  width: 26.3rem;
-
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
-  margin-right: auto;
-  margin-left: auto;
 }
 
 #home img {
@@ -226,7 +247,7 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
-.menu{
+.menu {
   transform: translateY(100%);
 }
 
@@ -302,7 +323,7 @@ body.menu-expanded button path {
 }
 
 /*=== SERVICES =================================*/
-#services header h4{
+#services header h4 {
   font-size: 1.4rem;
   line-height: 150%;
   letter-spacing: 0.08rem;
@@ -312,32 +333,81 @@ body.menu-expanded button path {
   text-transform: uppercase;
   margin-bottom: 1.6rem;
 }
+#services h2 {
+  margin-bottom: 6rem;
+}
 
-#services .cards{
+#services .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
-
-#services header h2{
-  font-size: 3rem;
-  line-height: 3.9rem;
-
-  color: var(--headline);
-
-  margin-bottom: 6rem;
-}
-#services .card{
+#services .card {
   padding: 2.4rem;
   text-align: left;
 
   background: white;
 
   border: 1px solid var(--brand-light);
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 }
-#services .card h3{
+#services .card h3 {
   margin-block: 1.6rem;
 }
 
 /*=== ABOUT =================================*/
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+/*=== CONTACT =================================*/
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+/*=== FOOTER =================================*/
+footer {
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+  color: white;
+}
+footer .logo{
+  display: inline-block;
+  margin-bottom: 2.4rem;
+
+}
+
+footer .logo svg{
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: white;
+}
